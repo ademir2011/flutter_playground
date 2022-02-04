@@ -41,9 +41,9 @@ class MainTinderScreen extends StatelessWidget {
 }
 
 final List<Map<String, dynamic>> data = [
-  {'icon': Icons.face, 'text': 'SIGN IN WITH APPLE'},
-  {'icon': Icons.face, 'text': 'SIGN IN WITH FACEBOOK'},
-  {'icon': Icons.face, 'text': 'SIGN IN WITH PHONE NUMBER'}
+  {'icon': Icons.system_security_update_good_outlined, 'text': 'SIGN IN WITH APPLE'},
+  {'icon': Icons.facebook, 'text': 'SIGN IN WITH FACEBOOK'},
+  {'icon': Icons.add_ic_call, 'text': 'SIGN IN WITH PHONE NUMBER'}
 ];
 
 class TinderScreen extends StatelessWidget {
@@ -79,7 +79,11 @@ class TinderScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const FlutterLogo(size: 45),
+                  Image.asset(
+                    'lib/assets/images/logo.png',
+                    height: 50,
+                  ),
+                  const SizedBox(width: 5),
                   Text(
                     'tinder',
                     style: Theme.of(context).textTheme.headline1,
