@@ -28,7 +28,6 @@ class _ImplicitSecondScreenState extends State<ImplicitSecondScreen> {
           ));
 
   final duration = 200;
-  var isTap = false;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class _ImplicitSecondScreenState extends State<ImplicitSecondScreen> {
           return Column(
             children: [
               ListTile(
-                leading: Text('${data[index].title}'),
+                leading: Text(data[index].title),
                 trailing: AnimatedRotation(
                   turns: data[index].isTap ? 0.5 : 0,
                   duration: Duration(milliseconds: duration),
