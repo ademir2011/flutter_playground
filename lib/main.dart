@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/screens/implicit_one_screen.dart';
+import 'package:flutter_playground/screens/implicit_second_screen.dart';
 import 'package:flutter_playground/screens/money_screen.dart';
 import 'package:flutter_playground/screens/tinder_screen.dart';
 
@@ -9,7 +10,7 @@ final buttons = [
   {'title': 'exercício 1.1 - Tela app money', 'link': const MainMoneyScreen()},
   {'title': 'exercício 1.2 - Tela app Tinder', 'link': const MainTinderScreen()},
   {'title': 'exercício 2.1.1 - Anim. Implic', 'link': const ImplicitOneScreen()},
-  {'title': 'exercício 2.1.2 - Anim. Implic', 'link': ''},
+  {'title': 'exercício 2.1.2 - Anim. Implic', 'link': const ImplicitSecondScreen()},
 ];
 
 class Menu extends StatelessWidget {
