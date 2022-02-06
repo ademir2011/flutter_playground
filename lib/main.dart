@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/screens/implicit_one_screen.dart';
 import 'package:flutter_playground/screens/money_screen.dart';
 import 'package:flutter_playground/screens/tinder_screen.dart';
 
 void main(List<String> args) => runApp(const MaterialApp(home: Menu()));
+
+final buttons = [
+  {'title': 'exercício 1.1 - Tela app money', 'link': const MainMoneyScreen()},
+  {'title': 'exercício 1.2 - Tela app Tinder', 'link': const MainTinderScreen()},
+  {'title': 'exercício 2.1.1 - Anim. Implic', 'link': const ImplicitOneScreen()},
+  {'title': 'exercício 2.1.2 - Anim. Implic', 'link': ''},
+];
 
 class Menu extends StatelessWidget {
   const Menu({Key? key}) : super(key: key);
@@ -12,24 +20,19 @@ class Menu extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ElevatedButton(
-          onPressed: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (ctx) => const MainMoneyScreen(),
-            ),
-          ),
-          child: const Text('exercício 1 - Tela app money'),
-        ),
-        ElevatedButton(
-          onPressed: () => Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (ctx) => const MainTinderScreen(),
-            ),
-          ),
-          child: const Text('exercício 2 - Tela app Tinder'),
-        ),
+        ...buttons.map(
+          (e) {
+            return ElevatedButton(
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (ctx) => (e['link'] as Widget),
+                ),
+              ),
+              child: Text(e['title'].toString()),
+            );
+          },
+        ).toList(),
       ],
     );
   }
