@@ -41,7 +41,7 @@ class _ControllerSecondScreenState extends State<ControllerSecondScreen> with Ti
         (index) {
           final animationController = AnimationController(
             vsync: this,
-            duration: const Duration(seconds: 1),
+            duration: const Duration(milliseconds: 500),
           );
           return Data(
             title: 'My expansion tile $index',

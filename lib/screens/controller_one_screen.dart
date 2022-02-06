@@ -18,7 +18,7 @@ class _ControllerOneScreeenState extends State<ControllerOneScreeen> with Ticker
   void initState() {
     super.initState();
 
-    _controller = AnimationController(vsync: this, duration: const Duration(seconds: 2));
+    _controller = AnimationController(vsync: this, duration: const Duration(seconds: 1));
 
     sizeAnimation = SizeTween(begin: const Size(50, 50), end: const Size(150, 50)).animate(_controller);
     alignAnimation = AlignmentTween(begin: Alignment.bottomRight, end: Alignment.topCenter).animate(_controller);

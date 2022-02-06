@@ -9,7 +9,7 @@ class ImplicitOneScreen extends StatefulWidget {
 
 class _ImplicitOneScreenState extends State<ImplicitOneScreen> {
   var isTap = false;
-  final duration = 2;
+  final duration = 1;
 
   @override
   Widget build(BuildContext context) {
