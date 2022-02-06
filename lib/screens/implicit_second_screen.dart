@@ -7,18 +7,26 @@ class ImplicitSecondScreen extends StatefulWidget {
   _ImplicitSecondScreenState createState() => _ImplicitSecondScreenState();
 }
 
-final List<Map<String, dynamic>> data = List.generate(
-    30,
-    (index) => {
-          'title': 'My expansion tile $index',
-          'logo': const FlutterLogo(size: 40),
-          'content':
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel condimentum eros. Sed non ligula rhoncus, eleifend ante non, congue urna. Sed sed nisi vitae mi ullamcorper interdum. Pellentesque scelerisque ornare justo ac dictum. Fusce molestie erat id rhoncus consectetur. Nullam eu fermentum odio. Aliquam tristique gravida diam, at congue turpis. Etiam eleifend fermentum dictum. Sed ultrices, ipsum id fermentum cursus, leo eros im',
-        });
+class Data {
+  final String title;
+  final FlutterLogo logo;
+  final String content;
+  bool isTap;
 
-List<bool> listIsTap = List.generate(data.length, (index) => false);
+  Data({required this.title, required this.logo, required this.content, required this.isTap});
+}
 
 class _ImplicitSecondScreenState extends State<ImplicitSecondScreen> {
+  final List<Data> data = List.generate(
+      30,
+      (index) => Data(
+            title: 'My expansion tile $index',
+            logo: const FlutterLogo(size: 40),
+            content:
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel condimentum eros. Sed non ligula rhoncus, eleifend ante non, congue urna. Sed sed nisi vitae mi ullamcorper interdum. Pellentesque scelerisque ornare justo ac dictum. Fusce molestie erat id rhoncus consectetur. Nullam eu fermentum odio. Aliquam tristique gravida diam, at congue turpis. Etiam eleifend fermentum dictum. Sed ultrices, ipsum id fermentum cursus, leo eros im',
+            isTap: false,
+          ));
+
   final duration = 200;
   var isTap = false;
 
@@ -34,29 +42,29 @@ class _ImplicitSecondScreenState extends State<ImplicitSecondScreen> {
           return Column(
             children: [
               ListTile(
-                leading: Text('${data[index]['title']}'),
+                leading: Text('${data[index].title}'),
                 trailing: AnimatedRotation(
-                  turns: listIsTap[index] ? 0.5 : 0,
+                  turns: data[index].isTap ? 0.5 : 0,
                   duration: Duration(milliseconds: duration),
                   child: const Icon(Icons.arrow_drop_down),
                 ),
                 onTap: () {
                   setState(() {
-                    listIsTap[index] = !listIsTap[index];
+                    data[index].isTap = !data[index].isTap;
                   });
                 },
               ),
               AnimatedAlign(
-                heightFactor: listIsTap[index] ? 1 : 0,
+                heightFactor: data[index].isTap ? 1 : 0,
                 alignment: Alignment.center,
                 duration: Duration(milliseconds: duration),
                 child: AnimatedOpacity(
                   duration: Duration(milliseconds: duration),
-                  opacity: listIsTap[index] ? 1 : 0,
+                  opacity: data[index].isTap ? 1 : 0,
                   child: Column(children: [
-                    data[index]['logo'],
+                    data[index].logo,
                     Text(
-                      data[index]['content'].toString(),
+                      data[index].content.toString(),
                       textAlign: TextAlign.justify,
                     ),
                   ]),

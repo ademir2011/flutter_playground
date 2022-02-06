@@ -27,9 +27,8 @@ class Data {
   });
 }
 
-List<Data> data = [];
-
 class _ControllerSecondScreenState extends State<ControllerSecondScreen> with TickerProviderStateMixin {
+  List<Data> data = [];
   @override
   void initState() {
     // TODO: implement initState
