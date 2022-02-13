@@ -60,7 +60,18 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/assets/images/logo.png
-  #   - images/a_dot_ham.jpeg
+    - lib/assets/images/masterclass_logo.png
+    - lib/assets/images/tinder_logo.png
+    #icons
+    - lib/assets/images/icons/Icon ionic-logo-whatsapp.png
+    - lib/assets/images/icons/Icon awesome-instagram.png
+    - lib/assets/images/icons/Icon awesome-github-alt.png
+    - lib/assets/images/icons/Icon awesome-facebook-f.png
+    - lib/assets/images/icons/Icon awesome-github.png
+    - lib/assets/images/icons/Icon awesome-glasses.png
+    - lib/assets/images/icons/Icon awesome-running.png
+    - lib/assets/images/icons/Icon feather-target.png
+    - lib/assets/images/icons/Icon material-toys.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -77,6 +88,13 @@ flutter:
     - family: MandoAfClassic
       fonts:
         - asset: lib/assets/fonts/MandoAfClassic-lgB6D.ttf
+    - family: Poppins
+      fonts:
+        - asset: lib/assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: lib/assets/fonts/poppins/Poppins-SemiBold.ttf
+    - family: Montserrat
+      fonts:
+        - asset: lib/assets/fonts/montserrat/Montserrat-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
