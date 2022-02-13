@@ -31,7 +31,6 @@ class _ControllerSecondScreenState extends State<ControllerSecondScreen> with Ti
   List<Data> data = [];
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     data.addAll(

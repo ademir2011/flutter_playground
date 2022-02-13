@@ -28,6 +28,7 @@ class CCardMe extends StatelessWidget {
               height: 75,
               width: 75,
               fit: BoxFit.cover,
+              filterQuality: FilterQuality.low,
             ),
           ),
           const SizedBox(height: 10),

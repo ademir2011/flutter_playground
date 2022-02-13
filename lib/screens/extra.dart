@@ -34,7 +34,6 @@ class _ExtraScreenState extends State<ExtraScreen> with TickerProviderStateMixin
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     controllers = List.generate(verticalElements, (index) {
@@ -69,7 +68,6 @@ class _ExtraScreenState extends State<ExtraScreen> with TickerProviderStateMixin
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     controllers.forEach((element) {
       element.dispose();
@@ -82,7 +80,7 @@ class _ExtraScreenState extends State<ExtraScreen> with TickerProviderStateMixin
       Row(
         children: List.generate(
           verticalElements,
-          (index) => Container(
+          (index) => SizedBox(
             width: sizeChar * 1.3,
             child: AnimatedBuilder(
               animation: controllers[index],
@@ -96,8 +94,14 @@ class _ExtraScreenState extends State<ExtraScreen> with TickerProviderStateMixin
       Center(
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Color(0xFF009966), width: 3),
-            boxShadow: [BoxShadow(color: Color(0xFF009966), blurRadius: 100, offset: Offset(0, 0))],
+            border: Border.all(color: const Color(0xFF009966), width: 3),
+            boxShadow: const [
+              BoxShadow(
+                color: Color(0xFF009966),
+                blurRadius: 100,
+                offset: Offset(0, 0),
+              ),
+            ],
           ),
           child: const Text(
             'FLUTRIX',
@@ -173,7 +177,6 @@ class _CodeTextState extends State<CodeText> {
 
   @override
   void initState() {
-    // TODO: implement initState
     valueSubString = Random().nextInt(24);
     character = 'abcdefghijklmnopqrstuvwxyz'.substring(valueSubString, valueSubString + 1);
     super.initState();
@@ -181,7 +184,7 @@ class _CodeTextState extends State<CodeText> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: sizeChar * 2,
       height: sizeChar,
       child: FittedBox(

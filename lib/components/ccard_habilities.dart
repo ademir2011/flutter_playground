@@ -25,7 +25,7 @@ class CCardHabilities extends StatelessWidget {
             height: 30,
             child: Row(
               children: [
-                Container(
+                SizedBox(
                   width: 75,
                   child: Text(
                     meData.habilities.keys.elementAt(index),

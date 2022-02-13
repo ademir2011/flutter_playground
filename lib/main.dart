@@ -43,25 +43,25 @@ class _MyAppState extends State<MyApp> {
         textTheme: const TextTheme(
           headline1: TextStyle(
             fontFamily: 'Poppins',
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
             color: Color(0xFF172026),
           ),
           headline2: TextStyle(
             fontFamily: 'Poppins',
-            fontSize: 16,
+            fontSize: 14,
             fontWeight: FontWeight.w600,
             color: Color(0xFF172026),
           ),
           bodyText1: TextStyle(
             fontFamily: 'Montserrat',
-            fontSize: 14,
+            fontSize: 12,
             fontWeight: FontWeight.w400,
             color: Color(0xFF51565A),
           ),
           bodyText2: TextStyle(
             fontFamily: 'Montserrat',
-            fontSize: 12,
+            fontSize: 10,
             fontWeight: FontWeight.w400,
             color: Color(0xFF172026),
           ),
@@ -87,25 +87,25 @@ class _MyAppState extends State<MyApp> {
         textTheme: const TextTheme(
           headline1: TextStyle(
             fontFamily: 'Poppins',
-            fontSize: 20,
+            fontSize: 18,
             fontWeight: FontWeight.w600,
             color: Color(0xFFEDF4F8),
           ),
           headline2: TextStyle(
             fontFamily: 'Poppins',
-            fontSize: 16,
+            fontSize: 14,
             fontWeight: FontWeight.w600,
             color: Color(0xFFEDF4F8),
           ),
           bodyText1: TextStyle(
             fontFamily: 'Montserrat',
-            fontSize: 14,
+            fontSize: 12,
             fontWeight: FontWeight.w400,
             color: Color(0xFF51565A),
           ),
           bodyText2: TextStyle(
             fontFamily: 'Montserrat',
-            fontSize: 12,
+            fontSize: 10,
             fontWeight: FontWeight.w400,
             color: Color(0xFFEDF4F8),
           ),
@@ -132,7 +132,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  void toogleTheme(value) {
+  void toogleTheme() {
     setState(() {
       TypeMode.toogle();
     });

@@ -3,7 +3,7 @@ import 'package:flutter_playground/components/cheader.dart';
 import 'package:flutter_playground/models/exercise.dart';
 
 class ExercisesPage extends StatelessWidget {
-  final Function(bool) toogleTheme;
+  final Function() toogleTheme;
   const ExercisesPage({Key? key, required this.toogleTheme}) : super(key: key);
 
   @override
@@ -18,7 +18,7 @@ class ExercisesPage extends StatelessWidget {
             toogleTheme: toogleTheme,
             isExercises: true,
             selectedIndex: 0,
-            titles: ['Atividades'],
+            titles: const ['Atividades'],
           ),
           Expanded(
             child: ListView.builder(

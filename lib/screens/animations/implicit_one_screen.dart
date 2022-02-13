@@ -15,7 +15,7 @@ class _ImplicitOneScreenState extends State<ImplicitOneScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Desafio do Botão Flutuante'),
+        title: const Text('Desafio do Botão Flutuante'),
       ),
       body: GestureDetector(
         onTap: () {

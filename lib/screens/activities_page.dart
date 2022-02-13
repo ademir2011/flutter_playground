@@ -10,6 +10,7 @@ import 'package:flutter_playground/screens/animations/controller_one_screen.dart
 import 'package:flutter_playground/screens/mockups/money_screen.dart';
 import 'package:flutter_playground/screens/mockups/tinder_screen.dart';
 import 'package:flutter_playground/utils/app_routes.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ActivitiesPage extends StatelessWidget {
   ActivitiesPage({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class ActivitiesPage extends StatelessWidget {
     Activity(
         type: ActivityTypeEnum.mockup,
         description: 'Clonagem de telas do Tinder e do app de Dinheiro',
-        gitUrl: 'git.com',
+        gitUrl: 'https://github.com/ademir2011/flutter_playground/tree/master/lib/screens/mockups',
         exercises: [
           Exercise(title: 'Tinder', widget: const MainTinderScreen()),
           Exercise(title: 'Mooney', widget: const MainMoneyScreen()),
@@ -26,7 +27,7 @@ class ActivitiesPage extends StatelessWidget {
     Activity(
         type: ActivityTypeEnum.animatios,
         description: 'Criação de animações implícitas e controladas',
-        gitUrl: 'git.com',
+        gitUrl: 'https://github.com/ademir2011/flutter_playground/tree/master/lib/screens/animations',
         exercises: [
           Exercise(title: 'Animação Implícita 1', widget: const ImplicitOneScreen()),
           Exercise(title: 'Animação Implícita 2', widget: const ImplicitSecondScreen()),
@@ -97,7 +98,9 @@ class ActivitiesPage extends StatelessWidget {
                     color: Theme.of(context).primaryIconTheme.color,
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      await launch(activities[index].gitUrl, forceWebView: true);
+                    },
                     child: Text(
                       'Acessar código fonte',
                       style: Theme.of(context).textTheme.bodyText2,

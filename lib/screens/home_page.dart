@@ -6,7 +6,7 @@ import 'package:flutter_playground/screens/activities_page.dart';
 import 'package:flutter_playground/screens/repositories.dart';
 
 class HomePage extends StatefulWidget {
-  final Function(bool) toogleTheme;
+  final Function() toogleTheme;
   const HomePage({Key? key, required this.toogleTheme}) : super(key: key);
 
   @override
@@ -63,7 +63,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     controllerPageView.dispose();
   }

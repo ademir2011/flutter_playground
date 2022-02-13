@@ -67,7 +67,7 @@ class MoneyScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 90),
-            Container(
+            SizedBox(
               height: 50,
               width: double.infinity,
               child: ElevatedButton(
@@ -84,7 +84,7 @@ class MoneyScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 15),
-            Container(
+            SizedBox(
               height: 50,
               width: double.infinity,
               child: ElevatedButton(

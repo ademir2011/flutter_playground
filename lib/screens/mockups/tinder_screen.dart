@@ -1,9 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/screens/exercises_page.dart';
-import 'package:flutter_playground/screens/home_page.dart';
-import 'package:flutter_playground/screens/splashscreen_page.dart';
-import 'package:flutter_playground/utils/app_routes.dart';
 
 class MainTinderScreen extends StatelessWidget {
   const MainTinderScreen({Key? key}) : super(key: key);
@@ -78,15 +74,6 @@ class TinderScreen extends StatelessWidget {
                 color: Colors.white,
                 onPressed: () {
                   Navigator.of(context, rootNavigator: true).pop();
-                  // Navigator.pushAndRemoveUntil(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (ctx) {
-                  //       return const SplashScreenPage();
-                  //     },
-                  //   ),
-                  //   (route) => false,
-                  // );
                 },
               ),
             ),

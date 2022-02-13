@@ -28,7 +28,6 @@ class _ControllerOneScreeenState extends State<ControllerOneScreeen> with Ticker
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     _controller.dispose();
   }
@@ -37,7 +36,7 @@ class _ControllerOneScreeenState extends State<ControllerOneScreeen> with Ticker
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Desafio do Botão Flutuante'),
+        title: const Text('Desafio do Botão Flutuante'),
       ),
       body: GestureDetector(
         onTap: () {

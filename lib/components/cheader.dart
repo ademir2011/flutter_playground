@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class CHeader extends StatelessWidget {
   final bool isExercises;
-  final Function(bool) toogleTheme;
+  final Function() toogleTheme;
   const CHeader({
     Key? key,
     this.isExercises = false,
@@ -49,10 +49,15 @@ class CHeader extends StatelessWidget {
           Expanded(
             child: Align(
               alignment: Alignment.centerRight,
-              child: Switch(
-                activeColor: Theme.of(context).primaryColor,
-                value: Theme.of(context).backgroundColor == const Color(0xFFD6DFE4) ? true : false,
-                onChanged: toogleTheme,
+              child: IconButton(
+                icon: ImageIcon(
+                  Theme.of(context).backgroundColor == const Color(0xFFD6DFE4)
+                      ? const AssetImage('lib/assets/images/icons/Icon awesome-moon_dark.png')
+                      : const AssetImage('lib/assets/images/icons/Icon awesome-moon_light.png'),
+                  size: 25,
+                  color: Theme.of(context).primaryIconTheme.color,
+                ),
+                onPressed: toogleTheme,
               ),
             ),
           ),
