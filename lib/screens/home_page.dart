@@ -52,10 +52,7 @@ class _HomePageState extends State<HomePage> {
               children: pages,
             ),
           ),
-          CBottomNavigationBar(
-            selectedIndex: _selectedIndex,
-            onNavigationTap: onNavigationTap,
-          ),
+          CBottomNavigationBar(onNavigationTap: onNavigationTap),
         ],
       ),
     );

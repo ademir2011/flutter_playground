@@ -1,73 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/components/cbottom_navigation_item.dart';
 
 class CBottomNavigationBar extends StatelessWidget {
-  final int selectedIndex;
   final Function(int) onNavigationTap;
-  const CBottomNavigationBar({
+  CBottomNavigationBar({
     Key? key,
-    required this.selectedIndex,
     required this.onNavigationTap,
   }) : super(key: key);
+
+  final bottomMenuData = [
+    {'icon': 'lib/assets/images/icons/Icon feather-target.png', 'text': 'Atividades'},
+    {'icon': 'lib/assets/images/icons/Icon awesome-github.png', 'text': 'Repositórios'},
+    {'icon': Icons.person, 'text': 'Sobre o dev'},
+  ];
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Column(
-            children: [
-              Icon(Icons.person),
-              Text('asd'),
-            ],
-          ),
-          const VerticalDivider(color: Colors.white, indent: 6, endIndent: 6),
-          Column(
-            children: [
-              Icon(Icons.person),
-              Text('asd'),
-            ],
-          ),
-          const VerticalDivider(color: Colors.white, indent: 6, endIndent: 6),
-          Column(
-            children: [
-              Icon(Icons.person),
-              Text('asd'),
-            ],
-          ),
-        ],
-      ),
-    );
-
-    return BottomNavigationBar(
-      backgroundColor: Theme.of(context).backgroundColor,
-      items: [
-        const BottomNavigationBarItem(
-          icon: ImageIcon(
-            AssetImage('lib/assets/images/icons/Icon feather-target.png'),
-            size: 15,
-          ),
-          label: 'Atividades',
+      height: 60,
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+        CBottomNavigationItem(
+          title: bottomMenuData[0]['text'].toString(),
+          index: 0,
+          onNavigationTap: onNavigationTap,
         ),
-        const BottomNavigationBarItem(
-          icon: ImageIcon(
-            AssetImage('lib/assets/images/icons/Icon awesome-github.png'),
-            size: 15,
-          ),
-          label: 'Repositórios',
+        const VerticalDivider(color: Colors.white, indent: 6, endIndent: 6),
+        CBottomNavigationItem(
+          title: bottomMenuData[1]['text'].toString(),
+          index: 1,
+          onNavigationTap: onNavigationTap,
         ),
-        BottomNavigationBarItem(
-          icon: Icon(
-            Icons.person,
-            size: 19,
-            color: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
-          ),
-          label: 'Sobre o dev',
+        const VerticalDivider(color: Colors.white, indent: 6, endIndent: 6),
+        CBottomNavigationItem(
+          title: bottomMenuData[2]['text'].toString(),
+          index: 2,
+          onNavigationTap: onNavigationTap,
         ),
-      ],
-      currentIndex: selectedIndex,
-      onTap: onNavigationTap,
+      ]),
     );
   }
 }
