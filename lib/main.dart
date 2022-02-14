@@ -121,6 +121,9 @@ class _MyAppState extends State<MyApp> {
             primary: const Color(0xFF055AA3),
           ),
         ),
+        dividerTheme: DividerThemeData(
+          color: Colors.white.withAlpha(100),
+        ),
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.SPLASH,
