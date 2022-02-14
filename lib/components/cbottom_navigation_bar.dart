@@ -11,6 +11,35 @@ class CBottomNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return SizedBox(
+      height: 50,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Column(
+            children: [
+              Icon(Icons.person),
+              Text('asd'),
+            ],
+          ),
+          const VerticalDivider(color: Colors.white, indent: 6, endIndent: 6),
+          Column(
+            children: [
+              Icon(Icons.person),
+              Text('asd'),
+            ],
+          ),
+          const VerticalDivider(color: Colors.white, indent: 6, endIndent: 6),
+          Column(
+            children: [
+              Icon(Icons.person),
+              Text('asd'),
+            ],
+          ),
+        ],
+      ),
+    );
+
     return BottomNavigationBar(
       backgroundColor: Theme.of(context).backgroundColor,
       items: [

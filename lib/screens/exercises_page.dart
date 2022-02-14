@@ -11,15 +11,15 @@ class ExercisesPage extends StatelessWidget {
     final exercises = ModalRoute.of(context)!.settings.arguments as List<Exercise>;
 
     return Scaffold(
+      appBar: CHeader(
+        toogleTheme: toogleTheme,
+        isExercises: true,
+        selectedIndex: 0,
+        titles: const ['Atividades'],
+      ),
       backgroundColor: Theme.of(context).backgroundColor,
       body: Column(
         children: [
-          CHeader(
-            toogleTheme: toogleTheme,
-            isExercises: true,
-            selectedIndex: 0,
-            titles: const ['Atividades'],
-          ),
           Expanded(
             child: ListView.builder(
               itemCount: exercises.length,
