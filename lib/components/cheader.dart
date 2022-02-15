@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/helpers/icon_helper.dart';
 
 class CHeader extends StatelessWidget implements PreferredSizeWidget {
   final bool isExercises;
@@ -33,7 +34,7 @@ class CHeader extends StatelessWidget implements PreferredSizeWidget {
                       Navigator.of(context).pop();
                     },
                   )
-                : Image.asset('lib/assets/images/logo.png', height: 40),
+                : Image.asset(IconHelper.getPath(IconName.logo), height: 40),
             const SizedBox(width: 5),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -54,8 +55,8 @@ class CHeader extends StatelessWidget implements PreferredSizeWidget {
                 child: IconButton(
                   icon: ImageIcon(
                     Theme.of(context).backgroundColor == const Color(0xFFD6DFE4)
-                        ? const AssetImage('lib/assets/images/icons/Icon awesome-moon_dark.png')
-                        : const AssetImage('lib/assets/images/icons/Icon awesome-moon_light.png'),
+                        ? AssetImage(IconHelper.getPath(IconName.moonDark))
+                        : AssetImage(IconHelper.getPath(IconName.moonLight)),
                     size: 25,
                     color: Theme.of(context).primaryIconTheme.color,
                   ),

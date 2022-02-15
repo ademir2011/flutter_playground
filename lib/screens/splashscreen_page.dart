@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_playground/helpers/icon_helper.dart';
 import 'package:flutter_playground/utils/app_routes.dart';
 
 class SplashScreenPage extends StatefulWidget {
@@ -25,7 +26,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   Widget build(BuildContext context) {
     return Center(
       child: Image.asset(
-        'lib/assets/images/masterclass_logo.png',
+        IconHelper.getPath(IconName.masterClassLogo),
         height: 50,
       ),
     );

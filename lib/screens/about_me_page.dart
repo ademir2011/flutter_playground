@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/components/ccard_habilities.dart';
 import 'package:flutter_playground/components/ccard_me.dart';
 import 'package:flutter_playground/components/clist_habilities.dart';
+import 'package:flutter_playground/helpers/icon_helper.dart';
 import 'package:flutter_playground/models/me.dart';
 
 class AboutMePage extends StatelessWidget {
@@ -21,10 +22,10 @@ class AboutMePage extends StatelessWidget {
         'Excel': 0.9,
       },
       socialNetworksUrl: [
-        'lib/assets/images/icons/Icon ionic-logo-whatsapp.png',
-        'lib/assets/images/icons/Icon awesome-github-alt.png',
-        'lib/assets/images/icons/Icon awesome-instagram.png',
-        'lib/assets/images/icons/Icon awesome-facebook-f.png',
+        IconHelper.getPath(IconName.whatsapp),
+        IconHelper.getPath(IconName.githubAlt),
+        IconHelper.getPath(IconName.instagram),
+        IconHelper.getPath(IconName.facebook),
       ]);
 
   @override

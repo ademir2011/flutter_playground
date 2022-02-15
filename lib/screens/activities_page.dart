@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/enums/activity_type_enum.dart';
 import 'package:flutter_playground/helpers/activity_helper.dart';
+import 'package:flutter_playground/helpers/icon_helper.dart';
 import 'package:flutter_playground/models/activity.dart';
 import 'package:flutter_playground/models/exercise.dart';
 import 'package:flutter_playground/screens/animations/controller_second_screen.dart';
@@ -58,7 +59,7 @@ class ActivitiesPage extends StatelessWidget {
                     radius: 17,
                     child: ImageIcon(
                       AssetImage(
-                        ActivityHelper.getIconName(activities[index].type),
+                        getIconType(activities[index].type),
                       ),
                       color: Theme.of(context).iconTheme.color,
                     ),
@@ -93,7 +94,7 @@ class ActivitiesPage extends StatelessWidget {
               Row(
                 children: [
                   ImageIcon(
-                    const AssetImage('lib/assets/images/icons/Icon awesome-github.png'),
+                    AssetImage(IconHelper.getPath(IconName.github)),
                     size: 15,
                     color: Theme.of(context).primaryIconTheme.color,
                   ),
@@ -134,5 +135,15 @@ class ActivitiesPage extends StatelessWidget {
         );
       },
     );
+  }
+
+  String getIconType(ActivityTypeEnum type) {
+    if (type == ActivityTypeEnum.animatios) {
+      return IconHelper.getPath(IconName.running);
+    } else if (type == ActivityTypeEnum.mockup) {
+      return IconHelper.getPath(IconName.glasses);
+    } else {
+      return IconHelper.getPath(IconName.toys);
+    }
   }
 }
