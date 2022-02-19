@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/components/cbottom_navigation_item.dart';
 import 'package:flutter_playground/helpers/icon_helper.dart';
+import 'package:flutter_playground/src/widgets/bottom_navigation_item_widget.dart';
 
-class CBottomNavigationBar extends StatelessWidget {
+class BottomNavigationBarWidget extends StatelessWidget {
   final int selectedIndex;
   final Function(int) onNavigationTap;
-  CBottomNavigationBar({
+  BottomNavigationBarWidget({
     Key? key,
     required this.onNavigationTap,
     required this.selectedIndex,
@@ -24,7 +24,7 @@ class CBottomNavigationBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          CBottomNavigationItem(
+          BottomNavigationItemWidget(
             title: bottomMenuData[0]['text'].toString(),
             imageIcon: ImageIcon(
               AssetImage(bottomMenuData[0]['icon'].toString()),
@@ -36,7 +36,7 @@ class CBottomNavigationBar extends StatelessWidget {
             onNavigationTap: onNavigationTap,
           ),
           VerticalDivider(color: Theme.of(context).dividerTheme.color, indent: 12.5, endIndent: 12.5),
-          CBottomNavigationItem(
+          BottomNavigationItemWidget(
             title: bottomMenuData[1]['text'].toString(),
             imageIcon: ImageIcon(
               AssetImage(bottomMenuData[1]['icon'].toString()),
@@ -48,7 +48,7 @@ class CBottomNavigationBar extends StatelessWidget {
             onNavigationTap: onNavigationTap,
           ),
           VerticalDivider(color: Theme.of(context).dividerTheme.color, indent: 12.5, endIndent: 12.5),
-          CBottomNavigationItem(
+          BottomNavigationItemWidget(
             title: bottomMenuData[2]['text'].toString(),
             icon: Icon(
               Icons.person,

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/helpers/icon_helper.dart';
 
-class CHeader extends StatelessWidget implements PreferredSizeWidget {
+class HeaderWidget extends StatelessWidget implements PreferredSizeWidget {
   final bool isExercises;
   final Function() toogleTheme;
 
-  const CHeader({
+  const HeaderWidget({
     Key? key,
     this.isExercises = false,
     required this.toogleTheme,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CBottomNavigationItem extends StatelessWidget {
+class BottomNavigationItemWidget extends StatelessWidget {
   final String title;
   final bool isSelected;
   final ImageIcon? imageIcon;
@@ -8,7 +8,7 @@ class CBottomNavigationItem extends StatelessWidget {
   final int index;
   final Function(int) onNavigationTap;
 
-  const CBottomNavigationItem({
+  const BottomNavigationItemWidget({
     Key? key,
     required this.title,
     required this.isSelected,

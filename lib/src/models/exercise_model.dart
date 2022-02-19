@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Exercise {
+class ExerciseModel {
   final String title;
   final Widget widget;
 
-  Exercise({required this.title, required this.widget});
+  ExerciseModel({required this.title, required this.widget});
 }

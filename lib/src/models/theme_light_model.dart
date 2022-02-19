@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CThemeLight {
+class ThemeLightModel {
   static final theme = ThemeData(
     primaryColor: const Color(0xFF055AA3),
     backgroundColor: const Color(0xFFD6DFE4),

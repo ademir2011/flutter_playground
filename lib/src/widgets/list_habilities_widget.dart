@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/models/me.dart';
+import 'package:flutter_playground/src/models/me_model.dart';
 
-class CListHabilities extends StatelessWidget {
-  const CListHabilities({
+class ListHabilitiesWidget extends StatelessWidget {
+  const ListHabilitiesWidget({
     Key? key,
     required this.meData,
   }) : super(key: key);
 
-  final Me meData;
+  final MeModel meData;
 
   @override
   Widget build(BuildContext context) {

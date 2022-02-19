@@ -1,13 +1,13 @@
 import 'package:flutter_playground/enums/activity_type_enum.dart';
-import 'package:flutter_playground/models/exercise.dart';
+import 'package:flutter_playground/src/models/exercise_model.dart';
 
-class Activity {
+class ActivityModel {
   final ActivityTypeEnum type;
   final String description;
-  final List<Exercise> exercises;
+  final List<ExerciseModel> exercises;
   final String gitUrl;
 
-  Activity({
+  ActivityModel({
     required this.type,
     required this.description,
     required this.gitUrl,

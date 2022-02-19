@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CThemeDark {
+class ThemeDarkModel {
   static final theme = ThemeData.dark().copyWith(
     primaryColor: const Color(0xFF055AA3),
     highlightColor: const Color(0xFFEDF4F8),

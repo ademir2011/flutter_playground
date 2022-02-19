@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_playground/enums/activity_type_enum.dart';
 import 'package:flutter_playground/helpers/activity_helper.dart';
 import 'package:flutter_playground/helpers/icon_helper.dart';
-import 'package:flutter_playground/models/activity.dart';
-import 'package:flutter_playground/models/exercise.dart';
-import 'package:flutter_playground/screens/animations/controller_second_screen.dart';
-import 'package:flutter_playground/screens/animations/implicit_one_screen.dart';
-import 'package:flutter_playground/screens/animations/implicit_second_screen.dart';
-import 'package:flutter_playground/screens/animations/controller_one_screen.dart';
-import 'package:flutter_playground/screens/mockups/money_screen.dart';
-import 'package:flutter_playground/screens/mockups/tinder_screen.dart';
+import 'package:flutter_playground/src/models/activity_model.dart';
+import 'package:flutter_playground/src/models/exercise_model.dart';
+import 'package:flutter_playground/src/pages/animations/controller_one_screen.dart';
+import 'package:flutter_playground/src/pages/animations/controller_second_screen.dart';
+import 'package:flutter_playground/src/pages/animations/implicit_one_screen.dart';
+import 'package:flutter_playground/src/pages/animations/implicit_second_screen.dart';
+import 'package:flutter_playground/src/pages/mockups/money_screen.dart';
+import 'package:flutter_playground/src/pages/mockups/tinder_screen.dart';
 import 'package:flutter_playground/utils/app_routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -17,23 +17,23 @@ class ActivitiesPage extends StatelessWidget {
   ActivitiesPage({Key? key}) : super(key: key);
 
   final activities = [
-    Activity(
+    ActivityModel(
         type: ActivityTypeEnum.mockup,
         description: 'Clonagem de telas do Tinder e do app de Dinheiro',
         gitUrl: 'https://github.com/ademir2011/flutter_playground/tree/master/lib/screens/mockups',
         exercises: [
-          Exercise(title: 'Tinder', widget: const MainTinderScreen()),
-          Exercise(title: 'Mooney', widget: const MainMoneyScreen()),
+          ExerciseModel(title: 'Tinder', widget: const MainTinderScreen()),
+          ExerciseModel(title: 'Mooney', widget: const MainMoneyScreen()),
         ]),
-    Activity(
+    ActivityModel(
         type: ActivityTypeEnum.animatios,
         description: 'Criação de animações implícitas e controladas',
         gitUrl: 'https://github.com/ademir2011/flutter_playground/tree/master/lib/screens/animations',
         exercises: [
-          Exercise(title: 'Animação Implícita 1', widget: const ImplicitOneScreen()),
-          Exercise(title: 'Animação Implícita 2', widget: const ImplicitSecondScreen()),
-          Exercise(title: 'Animação Controlada 1', widget: const ControllerOneScreeen()),
-          Exercise(title: 'Animação Controlada 2', widget: const ControllerSecondScreen()),
+          ExerciseModel(title: 'Animação Implícita 1', widget: const ImplicitOneScreen()),
+          ExerciseModel(title: 'Animação Implícita 2', widget: const ImplicitSecondScreen()),
+          ExerciseModel(title: 'Animação Controlada 1', widget: const ControllerOneScreeen()),
+          ExerciseModel(title: 'Animação Controlada 2', widget: const ControllerSecondScreen()),
         ]),
   ];
 

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/components/ctheme_dark.dart';
-import 'package:flutter_playground/components/ctheme_light.dart';
-import 'package:flutter_playground/screens/exercises_page.dart';
-import 'package:flutter_playground/screens/home_page.dart';
-import 'package:flutter_playground/screens/splashscreen_page.dart';
+import 'package:flutter_playground/src/models/theme_dark_model.dart';
+import 'package:flutter_playground/src/models/theme_light_model.dart';
 import 'package:flutter_playground/utils/app_routes.dart';
 
 class TypeMode {
@@ -36,8 +33,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: TypeMode.theme,
-      theme: CThemeLight.theme,
-      darkTheme: CThemeDark.theme,
+      theme: ThemeLightModel.theme,
+      darkTheme: ThemeDarkModel.theme,
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.SPLASH,
       routes: {

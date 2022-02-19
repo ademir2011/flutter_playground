@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/models/me.dart';
+import 'package:flutter_playground/src/models/me_model.dart';
 
-class CCardMe extends StatelessWidget {
-  const CCardMe({
+class CardMeWidget extends StatelessWidget {
+  const CardMeWidget({
     Key? key,
     required this.meData,
   }) : super(key: key);
 
-  final Me meData;
+  final MeModel meData;
 
   @override
   Widget build(BuildContext context) {
