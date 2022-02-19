@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/src/models/theme_dark_model.dart';
 import 'package:flutter_playground/src/models/theme_light_model.dart';
+import 'package:flutter_playground/src/pages/exercises_page.dart';
+import 'package:flutter_playground/src/pages/home_page.dart';
+import 'package:flutter_playground/src/pages/splashscreen_page.dart';
 import 'package:flutter_playground/utils/app_routes.dart';
 
 class TypeMode {

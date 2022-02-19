@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/components/cheader.dart';
-import 'package:flutter_playground/models/exercise.dart';
+import 'package:flutter_playground/src/models/exercise_model.dart';
+import 'package:flutter_playground/src/widgets/header_widget.dart';
 
 class ExercisesPage extends StatelessWidget {
   final Function() toogleTheme;
@@ -8,10 +8,10 @@ class ExercisesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final exercises = ModalRoute.of(context)!.settings.arguments as List<Exercise>;
+    final exercises = ModalRoute.of(context)!.settings.arguments as List<ExerciseModel>;
 
     return Scaffold(
-      appBar: CHeader(
+      appBar: HeaderWidget(
         toogleTheme: toogleTheme,
         isExercises: true,
         selectedIndex: 0,

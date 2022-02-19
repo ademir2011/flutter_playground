@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_playground/components/ccard_habilities.dart';
-import 'package:flutter_playground/components/ccard_me.dart';
-import 'package:flutter_playground/components/clist_habilities.dart';
 import 'package:flutter_playground/helpers/icon_helper.dart';
-import 'package:flutter_playground/models/me.dart';
+import 'package:flutter_playground/src/models/me_model.dart';
+import 'package:flutter_playground/src/widgets/card_habilities_widget.dart';
+import 'package:flutter_playground/src/widgets/card_me_widget.dart';
+import 'package:flutter_playground/src/widgets/list_habilities_widget.dart';
 
 class AboutMePage extends StatelessWidget {
   AboutMePage({Key? key}) : super(key: key);
 
-  final meData = Me(
+  final meData = MeModel(
       name: 'Mandaloriano',
       description:
           'Caçador de recompensas. Lutador de batalhas vorazes, destruidor de dragões, sou aquele que não adere a doutrina, portador de sabre Jedi porém não sou um. Sou apenas, o Mandaloriano.',
@@ -36,20 +36,20 @@ class AboutMePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CCardMe(meData: meData),
+            CardMeWidget(meData: meData),
             const SizedBox(height: 10),
             Text(
               'Tecnologias Favoritas',
               style: Theme.of(context).textTheme.headline2!.copyWith(fontSize: 12),
             ),
-            CListHabilities(meData: meData),
+            ListHabilitiesWidget(meData: meData),
             const SizedBox(height: 10),
             Text(
               'Habilidades e Competências',
               style: Theme.of(context).textTheme.headline2!.copyWith(fontSize: 12),
             ),
             const SizedBox(height: 5),
-            CCardHabilities(meData: meData),
+            CardHabilitiesWidget(meData: meData),
           ],
         ),
       ),

@@ -10,6 +10,7 @@ import 'package:flutter_playground/src/pages/animations/implicit_one_screen.dart
 import 'package:flutter_playground/src/pages/animations/implicit_second_screen.dart';
 import 'package:flutter_playground/src/pages/mockups/money_screen.dart';
 import 'package:flutter_playground/src/pages/mockups/tinder_screen.dart';
+import 'package:flutter_playground/src/pages/playground/mvw/main_mvw.dart';
 import 'package:flutter_playground/utils/app_routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -26,15 +27,24 @@ class ActivitiesPage extends StatelessWidget {
           ExerciseModel(title: 'Mooney', widget: const MainMoneyScreen()),
         ]),
     ActivityModel(
-        type: ActivityTypeEnum.animatios,
-        description: 'Criação de animações implícitas e controladas',
-        gitUrl: 'https://github.com/ademir2011/flutter_playground/tree/master/lib/screens/animations',
-        exercises: [
-          ExerciseModel(title: 'Animação Implícita 1', widget: const ImplicitOneScreen()),
-          ExerciseModel(title: 'Animação Implícita 2', widget: const ImplicitSecondScreen()),
-          ExerciseModel(title: 'Animação Controlada 1', widget: const ControllerOneScreeen()),
-          ExerciseModel(title: 'Animação Controlada 2', widget: const ControllerSecondScreen()),
-        ]),
+      type: ActivityTypeEnum.animatios,
+      description: 'Criação de animações implícitas e controladas',
+      gitUrl: 'https://github.com/ademir2011/flutter_playground/tree/master/lib/screens/animations',
+      exercises: [
+        ExerciseModel(title: 'Animação Implícita 1', widget: const ImplicitOneScreen()),
+        ExerciseModel(title: 'Animação Implícita 2', widget: const ImplicitSecondScreen()),
+        ExerciseModel(title: 'Animação Controlada 1', widget: const ControllerOneScreeen()),
+        ExerciseModel(title: 'Animação Controlada 2', widget: const ControllerSecondScreen()),
+      ],
+    ),
+    ActivityModel(
+      type: ActivityTypeEnum.playground,
+      description: 'Criação do design patters mvw',
+      gitUrl: '',
+      exercises: [
+        ExerciseModel(title: 'Animação Implícita 1', widget: const MainMVW()),
+      ],
+    ),
   ];
 
   @override
