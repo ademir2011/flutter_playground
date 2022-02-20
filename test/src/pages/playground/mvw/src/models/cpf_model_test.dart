@@ -7,7 +7,9 @@ void main() {
     var cpfModel2 = CpfModel(value: '00000000000');
     var cpfModel3 = CpfModel(value: '12315158181');
 
-    if (cpfModel1.isValid() && !cpfModel2.isValid() && !cpfModel3.isValid()) {
+    var cpfModel4 = CpfModel(value: cpfModel1.generate());
+
+    if (cpfModel4.isValid() && cpfModel1.isValid() && !cpfModel2.isValid() && !cpfModel3.isValid()) {
       print('PASSOU NOS TESTES');
     } else {
       print('NÂO PASSOU NOS TESTES !!!!!');
